@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>このAIについて｜ぺ～すけ</title>
+<meta name="description" content="JRA芝レース専用のAI予想。展開予測エンジンで買い目を単勝一点に絞り、勝ちも負けも全部公開しています。">
+<link rel="icon" href="static/img/pesuke_icon.png">
+<link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+<header class="site-header">
+  <img class="icon" src="static/img/pesuke_icon.png" alt="ぺ～すけ">
+  <div>
+    <div class="brand">ぺ～すけ</div>
+    <div class="tagline">展開を読む、芝単勝一点AI</div>
+  </div>
+  <nav>
+    <a href="index.html">今週の予想</a>
+    <a href="results.html">実績</a>
+    <a href="about.html">このAIについて</a>
+  </nav>
+</header>
+
+<div class="wrap">
+
+
+<div class="hero">
+  <img class="mascot" src="static/img/pesuke_icon.png" alt="ぺ～すけ">
+  <h1>このAIについて</h1>
+</div>
+
+<div class="card">
+  <h2 style="margin-top:0;color:var(--gold-dark);">ぼく、ぺ～すけ！</h2>
+  <p>JRAの<strong>芝レース専用</strong>に作られたAIです（ダート版は開発中）。
+  90以上の特徴量を使って出走全頭を評価し、買い目は<strong>単勝一点</strong>だけに絞っています。
+  煩わしい馬券の組み合わせは一切ありません。</p>
+</div>
+
+<div class="card">
+  <h2 style="margin-top:0;color:var(--gold-dark);">中身</h2>
+  <ul>
+    <li><strong>ランキング学習AI</strong> — LightGBM LambdaRank。着順そのものを学習します。</li>
+    <li><strong>JRA 7年分の芝レース</strong> — 2019年〜現在のレース結果と血統データを学習。</li>
+    <li><strong>血統3代 × コース適性</strong> — 父・母父・母母父を、競馬場×距離×馬場ごとに集計。
+      中山1200と東京2400では求められる能力が違うので、コースごとに適性を数値化しています。</li>
+    <li><strong>展開予測エンジン</strong> — 同じメンバーでも、ペースひとつで勝ち馬は変わります。
+      予想PCI・ハイ/スロー適性・逃げ先行密度・ロングスパート指数などから、
+      レースの展開タイプを予測し、各馬との相性を評価します。</li>
+    <li><strong>騎手・調教師の成績DB</strong> — 条件別の勝率・連対率を毎年更新。</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h2 style="margin-top:0;color:var(--gold-dark);">買い目の選び方</h2>
+  <p>AIの予想確率がオッズから逆算した確率（市場が織り込む確率）を上回る「期待値プラス」の馬を
+  最優先し、該当がなければAI1位の馬を採用します。ただしオッズ5倍未満は妙味なし、
+  25倍を超える馬は検証中として、単勝オッズ5〜25倍の範囲に絞って1頭だけ選んでいます。</p>
+</div>
+
+<div class="card">
+  <h2 style="margin-top:0;color:var(--gold-dark);">運営方針</h2>
+  <p>成績はブレるものだと考えています。都合のいい期間だけを切り取らず、
+  勝った期間も負けた期間も<a href="results.html">実績ページ</a>でそのまま公開しています。
+  結果速報は <a href="https://x.com/pesuke_ai" target="_blank" rel="noopener">@pesuke_ai</a>
+  （フォロー承認制）でも流しています。</p>
+</div>
+
+
+</div>
+
+<footer>
+  <nav>
+    <a href="index.html">今週の予想</a>
+    <a href="results.html">実績</a>
+    <a href="about.html">このAIについて</a>
+    <a href="privacy.html">プライバシーポリシー</a>
+  </nav>
+  <div>© ぺ～すけ｜@pesuke_ai</div>
+  <div class="disclaimer">
+    本サイトの予想は情報提供を目的としたものであり、的中・回収率を保証するものではありません。<br>
+    掲載している実績は過去の検証・運用結果であり、将来の成果を示すものではありません。<br>
+    馬券の購入は20歳以上、ご自身の判断と責任において、無理のない範囲で行ってください。
+  </div>
+</footer>
+</body>
+</html>
