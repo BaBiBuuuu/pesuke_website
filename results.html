@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>実績｜ぺ～すけ</title>
-<meta name="description" content="JRA芝レース専用のAI予想。展開予測エンジンで買い目を単勝一点に絞り、勝ちも負けも全部公開しています。">
+<meta name="description" content="JRA芝レース専用のAI予想。展開予測エンジンでAI1位×中穴の2頭軸3連複を組み、勝ちも負けも全部公開しています。">
 <link rel="icon" href="static/img/pesuke_icon.png">
 <link rel="stylesheet" href="static/style.css">
 </head>
@@ -13,7 +13,7 @@
   <img class="icon" src="static/img/pesuke_icon.png" alt="ぺ～すけ">
   <div>
     <div class="brand">ぺ～すけ</div>
-    <div class="tagline">展開を読む、芝単勝一点AI</div>
+    <div class="tagline">展開を読む、🎯中穴3連複AI</div>
   </div>
   <nav>
     <a href="index.html">今週の予想</a>
@@ -28,22 +28,45 @@
 
 <div class="hero">
   <h1>成績はブレます。だから、全部見せる。</h1>
-  <p class="sub">集計期間: 2021-01 〜 2026-07（更新: 2026-07-16）</p>
+  <p class="sub">現在の主力は🎯中穴3連複。集計期間: 2026.04.25 〜 2026.07.19</p>
 </div>
 
-<div class="stat-grid">
-  <div class="stat"><div class="label">賭けレース数</div><div class="value">2955</div></div>
-  <div class="stat"><div class="label">的中率</div><div class="value">10.6%</div></div>
-  <div class="stat"><div class="label">累計回収率</div><div class="value">118.0%</div></div>
+<div class="card" style="border-color:var(--gold-dark);">
+  <h2 style="margin-top:0;color:var(--gold-dark);">🎯 中穴3連複（現在の主力）</h2>
+  
+  <div class="stat-grid">
+    <div class="stat"><div class="label">賭けレース数</div><div class="value">170</div></div>
+    <div class="stat"><div class="label">的中率</div><div class="value">1.8%</div></div>
+    <div class="stat"><div class="label">回収率</div><div class="value" style="color:var(--green);">213.0%</div></div>
+  </div>
+  <p style="font-size:14px;color:var(--grey);margin-bottom:0;">
+    軸1（AI予想1位）× 軸2（単勝10〜25倍の中でAI評価が最も高い馬）の2頭軸、
+    3着目はAI評価上位3頭への流し。軸1が単勝5倍未満のレースは収支に含めていません
+    （的中率・回収率とも悪化する傾向を確認済みのため）。
+  </p>
+  
+</div>
+
+<div class="card" style="font-size:13px;color:var(--grey);">
+  <p><strong>この数字について:</strong>
+  2026-04-21〜7-19分は、当時実際に本番で出力していたAI予想（再学習なし）をそのまま使い、
+  netkeibaの結果ページから実際の着順・3連複払戻をスクレイピングして判定したものです。
+  馬券を購入した記録ではありません。7-22の機能公開以降は、実際の運用結果を追記していきます。
+  サンプル数はまだ少なく、今後の推移を見て評価してください。</p>
 </div>
 
 <div class="card">
-  <img class="full" src="static/img/record_summary.png" alt="累計回収率の推移">
-</div>
+  <h2 style="margin-top:0;color:var(--grey);">参考: 単勝一点AI（旧方式）</h2>
+  <p class="sub" style="margin:0 0 14px;">集計期間: 2021-01 〜 2026-07（更新: 2026-07-22）</p>
+  <div class="stat-grid">
+    <div class="stat"><div class="label">賭けレース数</div><div class="value">2955</div></div>
+    <div class="stat"><div class="label">的中率</div><div class="value">10.6%</div></div>
+    <div class="stat"><div class="label">累計回収率</div><div class="value">118.0%</div></div>
+  </div>
 
-<div class="card">
-  <h2 style="margin-top:0;color:var(--gold-dark);">期間別の内訳</h2>
-  <table class="board">
+  <img class="full" src="static/img/record_summary.png" alt="累計回収率の推移" style="margin-top:16px;">
+
+  <table class="board" style="margin-top:16px;">
     <thead><tr><th>期間</th><th>賭け数</th><th>的中率</th><th>回収率</th></tr></thead>
     <tbody>
     
@@ -133,15 +156,12 @@
     
     </tbody>
   </table>
-</div>
 
-<div class="card" style="font-size:14px;color:var(--grey);">
-  <p><strong>検証と実運用について:</strong>
+  <p style="font-size:14px;color:var(--grey);margin-top:16px;">
   2026年6月までの成績は、本番と同一ロジック（LambdaRank・直近2期間ローリング学習）による
-  ウォークフォワード検証値です。実際に馬券を購入した記録ではありません。
-  それ以降は、実際に@pesuke_aiで公開した予想の結果を追記しています。</p>
-  <p>買いルールは一貫して「AIの予想確率がオッズを上回る馬（該当なければAI1位）を、
-  単勝オッズ5〜25倍の範囲で1頭だけ」です。負けている期間もそのまま掲載しています。</p>
+  ウォークフォワード検証値です。買いルールは「AIの予想確率がオッズを上回る馬（該当なければAI1位）を、
+  単勝オッズ5〜25倍の範囲で1頭だけ」。負けている期間もそのまま掲載しています。
+  現在は🎯中穴3連複へ主力を移行中です。</p>
 </div>
 
 

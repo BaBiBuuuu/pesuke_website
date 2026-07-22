@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>このAIについて｜ぺ～すけ</title>
-<meta name="description" content="JRA芝レース専用のAI予想。展開予測エンジンで買い目を単勝一点に絞り、勝ちも負けも全部公開しています。">
+<meta name="description" content="JRA芝レース専用のAI予想。展開予測エンジンでAI1位×中穴の2頭軸3連複を組み、勝ちも負けも全部公開しています。">
 <link rel="icon" href="static/img/pesuke_icon.png">
 <link rel="stylesheet" href="static/style.css">
 </head>
@@ -13,7 +13,7 @@
   <img class="icon" src="static/img/pesuke_icon.png" alt="ぺ～すけ">
   <div>
     <div class="brand">ぺ～すけ</div>
-    <div class="tagline">展開を読む、芝単勝一点AI</div>
+    <div class="tagline">展開を読む、🎯中穴3連複AI</div>
   </div>
   <nav>
     <a href="index.html">今週の予想</a>
@@ -33,9 +33,9 @@
 
 <div class="card">
   <h2 style="margin-top:0;color:var(--gold-dark);">ぼく、ぺ～すけ！</h2>
-  <p>JRAの<strong>芝レース専用</strong>に作られたAIです（ダート版は開発中）。
-  100以上の特徴量を使って出走全頭を評価し、買い目は<strong>単勝一点</strong>だけに絞っています。
-  煩わしい馬券の組み合わせは一切ありません。</p>
+  <p>JRAの<strong>芝レース専用</strong>に作られたAIです（ダート版も検証中）。
+  100以上の特徴量を使って出走全頭を評価し、現在の主力は<strong>🎯中穴3連複</strong>
+  （AI1位×中穴の2頭軸＋AI評価上位3頭への流し）です。</p>
 </div>
 
 <div class="card">
@@ -53,10 +53,13 @@
 </div>
 
 <div class="card">
-  <h2 style="margin-top:0;color:var(--gold-dark);">買い目の選び方</h2>
-  <p>AIの予想1位の馬だけを見ます。2位以下に妥協することはありません。
-  その馬の予想確率がオッズから逆算した確率（市場が織り込む確率）を上回り、
-  かつ単勝オッズが15〜25倍の範囲に収まっているときだけ、1頭だけ選んでいます。</p>
+  <h2 style="margin-top:0;color:var(--gold-dark);">🎯中穴3連複の組み方</h2>
+  <p><strong>軸1</strong>: AIの予想1位（ただし単勝オッズが5倍未満のときは収支・HP掲載の
+  対象外にしています。本命すぎるレースでは3連複としての妙味が薄いため）。
+  <strong>軸2</strong>: 単勝10〜25倍の中でAI評価が最も高い馬。
+  <strong>3着目</strong>: 軸1・軸2以外でAI評価が高い上位3頭への流しです。</p>
+  <p style="color:var(--grey);font-size:14px;">単勝一点AI（旧方式、AIの予想1位が単勝15〜25倍かつ
+  予想確率が市場確率を上回るときだけ1頭）も参考表示として引き続き掲載しています。</p>
 </div>
 
 <div class="card">
